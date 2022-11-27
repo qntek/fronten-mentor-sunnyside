@@ -110,7 +110,7 @@ header p {
   text-align: center;
 }
 .first .first-text h2 {
-  margin-top: 20px;
+  margin: 20px 25px 0 25px;
   font-family: "Fraunces", serif;
   font-weight: 900;
   font-size: 36px;
@@ -124,6 +124,7 @@ header p {
   line-height: 30px;
 }
 .first .first-text a {
+  margin-bottom: 35px;
   position: relative;
   text-decoration: none;
   text-transform: uppercase;
@@ -154,12 +155,42 @@ header p {
 .first .hover-red a:focus::before {
   background-color: hsl(7deg, 99%, 70%);
 }
-.first .cherry-img {
+.first .first-img-inner-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-content: center;
   width: 100vw;
   height: 200vw;
   background-position: center;
   background-size: cover;
+}
+.first .first-img-inner-text h2 {
+  margin: 20px 25px 15px 25px;
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+  font-size: 32px;
+  text-transform: capitalize;
+  text-align: center;
+}
+.first .first-img-inner-text p {
+  margin-bottom: 35px;
+  padding: 25px;
+  font-family: "Barlow", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 25px;
+  text-align: center;
+}
+.first .cherry-img {
   background-image: url("../images/mobile/image-graphic-design.jpg");
+  color: hsl(167deg, 40%, 24%);
+  grid-row: 5/6;
+}
+.first .orange-img {
+  background-image: url("../images/mobile/image-photography.jpg");
+  color: hsl(198deg, 62%, 26%);
+  grid-row: 6/7;
 }
 
 @-webkit-keyframes arrow-bounce {
