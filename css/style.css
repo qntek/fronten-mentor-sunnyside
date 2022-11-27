@@ -178,7 +178,7 @@ header p {
   padding: 25px;
   font-family: "Barlow", sans-serif;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 25px;
   text-align: center;
 }
@@ -191,6 +191,71 @@ header p {
   background-image: url("../images/mobile/image-photography.jpg");
   color: hsl(198deg, 62%, 26%);
   grid-row: 6/7;
+}
+
+.clients {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: center;
+}
+.clients h3 {
+  margin: 60px 25px 50px 25px;
+  text-transform: uppercase;
+  text-align: center;
+  color: hsla(232deg, 10%, 55%, 0.671);
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+  font-size: 18px;
+  letter-spacing: 3px;
+}
+.clients .client {
+  width: 100%;
+  margin: 25px auto;
+}
+.clients .client .client-pic {
+  width: 70px;
+  height: 80px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+}
+.clients .client .client-pic-one {
+  background-image: url("../images/image-emily.jpg");
+}
+.clients .client .client-pic-two {
+  background-image: url("../images/image-thomas.jpg");
+}
+.clients .client .client-pic-three {
+  background-image: url("../images/image-jennie.jpg");
+}
+.clients .client .clients-text {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  padding: 25px;
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  color: hsl(233deg, 7%, 48%);
+  text-align: center;
+  line-height: 30px;
+}
+.clients .client .clients-sign {
+  margin-bottom: 15px;
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+  font-size: 22px;
+  text-align: center;
+}
+.clients .client .clients-function {
+  margin-bottom: 25px;
+  text-align: center;
+  color: hsla(232deg, 10%, 55%, 0.671);
+  font-size: 16px;
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
 }
 
 @-webkit-keyframes arrow-bounce {
