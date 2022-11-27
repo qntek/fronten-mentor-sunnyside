@@ -1,26 +1,4 @@
-*,
-*::after,
-*::before {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-}
-
-html {
-	scroll-behavior: smooth;
-	font-size: 62.5%;
-}
-
-a {
-	text-decoration: none;
-}
-
-input,
-button,
-textarea,
-select {
-	font-family: inherit;
-}
+@import 'reset';
 
 .off {
 	display: none;
@@ -49,6 +27,7 @@ header {
 		padding: 5px;
 		border: none;
 		background: none;
+		z-index: 1000;
 		cursor: pointer;
 		img {
 			width: 28px;
@@ -75,6 +54,70 @@ header {
 		font-size: 32px;
 	}
 }
+
+// NAVBAR---NAVBAR
+
+.nav-mobile {
+	position: fixed;
+	width: calc(100vw - 50px);
+	height: calc(100vw - 50px);
+	top: 110px;
+	left: 25px;
+
+	padding: 30px;
+	background-color: white;
+	z-index: 100;
+	div {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+	}
+}
+.nav-mobile::before {
+	content: '';
+	position: absolute;
+	top: -10%;
+	right: 0;
+	width: 0;
+	height: 0;
+	border-left: 5vw solid transparent;
+	border-top: 5vw solid transparent;
+	border-right: 5vw solid white;
+	border-bottom: 5vw solid white;
+}
+.nav-launched {
+	animation: launch-mobile-nav 0.5s linear forwards;
+}
+
+.navbar-link {
+	width: 130px;
+	padding: 15px;
+	border-radius: 27px;
+	font-family: 'Barlow', sans-serif;
+	font-weight: 600;
+	font-size: 20px;
+	text-align: center;
+	color: hsl(232, 10%, 55%);
+	background-color: transparent;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+.navbar-link-mobile {
+	margin: 0 auto;
+}
+.navbar-link-mobile:hover,
+.navbar-link-mobile:focus,
+.navbar-link-mobile:active {
+	background-color: hsl(51, 100%, 49%);
+}
+.navbar-link-mobile:focus,
+.navbar-link-mobile:active {
+	color: black;
+	font-weight: 700;
+}
+//MOBILE NAVBAR END
 
 .first {
 	display: grid;
@@ -348,5 +391,14 @@ footer {
 	}
 	100% {
 		transform: translate(-50%, -50%);
+	}
+}
+
+@keyframes launch-mobile-nav {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
 	}
 }

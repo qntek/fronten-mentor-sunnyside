@@ -51,6 +51,7 @@ header .nav-mobile-button {
   padding: 5px;
   border: none;
   background: none;
+  z-index: 1000;
   cursor: pointer;
 }
 header .nav-mobile-button img {
@@ -75,6 +76,72 @@ header p {
   font-family: "Cabin", sans-serif;
   font-weight: 700;
   font-size: 32px;
+}
+
+.nav-mobile {
+  position: fixed;
+  width: calc(100vw - 50px);
+  height: calc(100vw - 50px);
+  top: 110px;
+  left: 25px;
+  padding: 30px;
+  background-color: white;
+  z-index: 100;
+}
+.nav-mobile div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.nav-mobile::before {
+  content: "";
+  position: absolute;
+  top: -10%;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-left: 5vw solid transparent;
+  border-top: 5vw solid transparent;
+  border-right: 5vw solid white;
+  border-bottom: 5vw solid white;
+}
+
+.nav-launched {
+  -webkit-animation: launch-mobile-nav 0.5s linear forwards;
+          animation: launch-mobile-nav 0.5s linear forwards;
+}
+
+.navbar-link {
+  width: 130px;
+  padding: 15px;
+  border-radius: 27px;
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  text-align: center;
+  color: hsl(232deg, 10%, 55%);
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.navbar-link-mobile {
+  margin: 0 auto;
+}
+
+.navbar-link-mobile:hover,
+.navbar-link-mobile:focus,
+.navbar-link-mobile:active {
+  background-color: hsl(51deg, 100%, 49%);
+}
+
+.navbar-link-mobile:focus,
+.navbar-link-mobile:active {
+  color: black;
+  font-weight: 700;
 }
 
 .first {
@@ -359,5 +426,21 @@ footer .footer-icons a {
   }
   100% {
     transform: translate(-50%, -50%);
+  }
+}
+@-webkit-keyframes launch-mobile-nav {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes launch-mobile-nav {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }/*# sourceMappingURL=style.css.map */
