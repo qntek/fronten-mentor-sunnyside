@@ -258,6 +258,86 @@ header p {
   font-weight: 600;
 }
 
+.second {
+  width: 100vw;
+  height: 100vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.second .second-img {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+.second .second-one {
+  background-image: url("../images/mobile/image-gallery-milkbottles.jpg");
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.second .second-two {
+  background-image: url("../images/mobile/image-gallery-orange.jpg");
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+.second .second-three {
+  background-image: url("../images/mobile/image-gallery-cone.jpg");
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+.second .second-four {
+  background-image: url("../images/mobile/image-gallery-sugar-cubes.jpg");
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
+footer {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: center;
+  width: 100vw;
+  height: 100vw;
+  color: hsl(168deg, 34%, 41%);
+  background-color: #90d4c5;
+  text-align: center;
+}
+footer .footer-header {
+  padding: 35px 15px;
+  font-family: "Barlow", sans-serif;
+  font-weight: 900;
+  font-size: 42px;
+  color: hsl(169deg, 32%, 30%);
+}
+footer .footer-links {
+  margin: 30px 25px 0 25px;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+footer .footer-links a {
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  text-decoration: none;
+  cursor: pointer;
+  color: hsl(168deg, 34%, 41%);
+}
+footer .footer-icons {
+  display: flex;
+  flex: wrap;
+  justify-content: center;
+  margin-bottom: 75px;
+}
+footer .footer-icons a {
+  text-decoration: none;
+  margin: 0 12px;
+  cursor: pointer;
+}
+
 @-webkit-keyframes arrow-bounce {
   0% {
     transform: translate(-50%, -50%);
