@@ -6,7 +6,7 @@ hamburgerBtn.addEventListener('click', showMobileNavBar);
 arrowDown.addEventListener('click', closeNavMobile);
 navMobile.addEventListener('click', (e) => {
 	if (e.target.nodeName === 'A') {
-		closeNavMobile();
+		setTimeout(closeNavMobile, 1000);;
 	}
 });
 
