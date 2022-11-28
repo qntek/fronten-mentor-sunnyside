@@ -6,16 +6,23 @@ hamburgerBtn.addEventListener('click', showMobileNavBar);
 arrowDown.addEventListener('click', closeNavMobile);
 navMobile.addEventListener('click', (e) => {
 	if (e.target.nodeName === 'A') {
-		setTimeout(closeNavMobile, 1000);;
+		closeNavMobile();
 	}
 });
 
 function showMobileNavBar() {
-	navMobile.classList.toggle('off');
-	navMobile.classList.toggle('nav-launched');
+	if (navMobile.classList.contains('off')) {
+		navMobile.classList.remove('nav-turned-off');
+		navMobile.classList.remove('off');
+		navMobile.classList.add('nav-launched');
+	} else {
+		navMobile.classList.add('nav-turned-off');
+	setTimeout(() => navMobile.classList.add('off'), 750);
+	}
 }
 
 function closeNavMobile() {
-	navMobile.classList.add('off');
+	navMobile.classList.add('nav-turned-off');
+	setTimeout(() => navMobile.classList.add('off'), 750);
 	navMobile.classList.remove('nav-launched');
 }
